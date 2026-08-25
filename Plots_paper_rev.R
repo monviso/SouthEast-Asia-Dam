@@ -55,12 +55,11 @@ mean(inp$T_diff, na.rm=T); sd(inp$T_diff, na.rm=T)
 median(inp$T_diff, na.rm=T)
 # Candidate dam file is only needed to plot orange "no HQ observation" dams.
 # Option A: shapefile with lake/river polygons and a dam-name column.
-candidate_shp <- "E:/OneDrive/Documents/satData_AppEEars/csv_dam/shp/sites_full.shp"
+candidate_shp <- "~/sites_full.shp"
 cand<-read_sf(candidate_shp)
-# Option B: CSV with dam/name plus latitude/longitude columns.
-#candidate_csv <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs/site_coordinate_lookup_after_name_reconciliation.csv"
 
-output_dir <- "E:/OneDrive/Documents/satData_AppEEars/figures"
+
+output_dir <- "~/figures"
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 # If TRUE, point size on map also varies with number of observations.
