@@ -54,8 +54,8 @@ library(lubridate)
 # Local paths
 # -------------------------------------------------------------------------
 
-input_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs"
-output_root <- "E:/OneDrive/Documents/satData_AppEEars/model_outputs"
+input_dir <- "~/model_inputs"
+output_root <- "~/model_outputs"
 output_dir <- file.path(output_root, "step3A_main_models")
 
 # Set FALSE if you do not want partial-effect plots. The model summary CSVs
