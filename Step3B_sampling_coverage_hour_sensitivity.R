@@ -49,8 +49,8 @@ has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
 # Local paths and switches
 # -------------------------------------------------------------------------
 
-input_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs"
-output_root <- "E:/OneDrive/Documents/satData_AppEEars/model_outputs"
+input_dir <- "~/model_inputs"
+output_root <- "~/model_outputs"
 step3A_dir <- file.path(output_root, "step3A_main_models")
 output_dir <- file.path(output_root, "step3B_sampling_coverage_hour_sensitivity")
 
