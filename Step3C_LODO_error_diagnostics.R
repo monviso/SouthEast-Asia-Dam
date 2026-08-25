@@ -32,8 +32,8 @@ library(purrr)
 library(readr)
 library(tibble)
 
-input_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs"
-output_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_outputs"
+input_dir <- "~/model_inputs"
+output_dir <- "~/model_outputs"
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 summary_dir <- file.path(output_dir, "model_summaries")
 effect_dir <- file.path(output_dir, "significant_partial_effects")
