@@ -37,8 +37,8 @@ library(lubridate)
 library(jsonlite)
 library(stringr)
 
-input_candidates <- c( "E:/OneDrive/Documents/satData_AppEEars/model_inputs/sites_complete_HQ_obs_ECOSTRESS.csv"
 )
+input_candidates <- c( "~/sites_complete_HQ_obs_ECOSTRESS.csv")
 
 input_csv <- input_candidates[file.exists(input_candidates)][1]
 
@@ -46,8 +46,8 @@ if (is.na(input_csv)) {
   stop("Could not find an input CSV in /workspace/.cache.", call. = FALSE)
 }
 
-power_cache_dir <- "E:/OneDrive/Documents/satData_AppEEars/climate_cache_nasa_power"
-output_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs/"
+power_cache_dir <- "~/climate_cache_nasa_power"
+output_dir <- "~/model_inputs/"
 
 dir.create(power_cache_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
