@@ -47,7 +47,7 @@ library(scales)
 # Local paths: edit only this block if needed
 # -----------------------------------------------------------------------------
 
-input_csv <- "E:/OneDrive/Documents/satData_AppEEars/model_inputs/sites_complete_HQ_obs_ECOSTRESS.csv"
+input_csv <- "~/sites_complete_HQ_obs_ECOSTRESS.csv"
 inp<-read.csv(input_csv)
 mean(inp$Tm_l, na.rm=T); sd(inp$Tm_l, na.rm=T)
 mean(inp$Tm_o, na.rm=T); sd(inp$Tm_o, na.rm=T)
@@ -457,8 +457,8 @@ p_temp_facet <- ggplot(temp_long, aes(x = metric, y = value, fill = metric)) +
     ~ axis_group,
     scales = "free_y",
     #labeller = as_labeller(c(
-      #WST = "Water surface temperature (캜)",
-      #Tdiff = "Outlet - reservoir WST (캜)"
+      #WST = "Water surface temperature (째C)",
+      #Tdiff = "Outlet - reservoir WST (째C)"
     #))
   ) +
   scale_fill_manual(
@@ -513,7 +513,7 @@ p_temp_single <- ggplot(temp_long, aes(x = metric, y = value, fill = metric)) +
   labs(
     title = "Observed ECOSTRESS WST and outlet-reservoir temperature difference",
     x = NULL,
-    y = "Temperature / temperature difference (캜)",
+    y = "Temperature / temperature difference (째C)",
     fill = NULL
   ) +
   theme_minimal(base_size = 13) +
@@ -556,10 +556,10 @@ p_temp_secondary <- ggplot() +
     width = 0.55
   ) +
   scale_y_continuous(
-    name = "WST (캜)",
+    name = "WST (째C)",
     sec.axis = sec_axis(
       trans = ~ (. - offset) / scale_factor,
-      name = " WST diff (캜)"
+      name = " WST diff (째C)"
     )
   ) +
   scale_fill_manual(
