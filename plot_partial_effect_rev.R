@@ -44,7 +44,7 @@ library(scales)
 # User settings
 # -------------------------------------------------------------------------
 
-step3A_dir <- "E:/OneDrive/Documents/satData_AppEEars/model_outputs/step3A_main_models"
+step3A_dir <- "~/model_outputs/step3A_main_models"
 fit_search_dir <- step3A_dir
 
 output_dir <- file.path(step3A_dir, "step3D_significant_effect_figures_ggplot_v5")
@@ -163,7 +163,7 @@ pretty_term_label <- function(term) {
 
 axis_label <- function(var) {
   dplyr::case_when(
-    var %in% c("Air_T", "Air_T_l") ~ "Air temperature (°C)",
+    var %in% c("Air_T", "Air_T_l") ~ "Air temperature (Â°C)",
     var %in% c("prec", "prec_l") ~ "Precipitation (mm)",
     var %in% c("wind", "wind_l") ~ "Wind speed (m s-1)",
     var %in% c("shortW", "shortW_l") ~ "Shortwave radiation (J m-2)",
@@ -552,7 +552,7 @@ plot_1d_effect <- function(panel_df, term, p_value, x_label) {
     labs(
       title = paste0(pretty_term_label(term), "  (p = ", format_p(p_value), ")"),
       x = x_label,
-      y = "Partial effect (°C)"
+      y = "Partial effect (Â°C)"
     ) +
     theme_bw(base_size = 10) +
     theme(
@@ -581,7 +581,7 @@ plot_2d_effect <- function(panel_df, term, p_value, x_label, y_label,
       midpoint = 0,
       limits = colour_limits,
       oob = scales::squish,
-      name = "Partial\neffect (°C)"
+      name = "Partial\neffect (Â°C)"
     ) +
     coord_cartesian(expand = FALSE) +
     labs(
